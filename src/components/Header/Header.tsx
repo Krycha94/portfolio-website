@@ -1,3 +1,4 @@
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import styles from "./Header.module.scss";
 
 const Header = () => {
@@ -14,7 +15,9 @@ const Header = () => {
 					link-3
 				</a>
 			</nav>
-			<button className={styles.header__hamburger}>x</button>
+			<button className={styles.header__hamburger}>
+				<HiOutlineMenuAlt3 />
+			</button>
 		</header>
 	);
 };
