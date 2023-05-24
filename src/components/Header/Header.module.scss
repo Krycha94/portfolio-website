@@ -1,6 +1,7 @@
 @use "../../styles/variables" as v;
 @use "../../styles/breakpoints" as b;
 @use "../../styles/mixins" as m;
+@use "../../styles/animations" as a;
 
 .header {
 	position: sticky;
@@ -23,6 +24,10 @@
 			gap: 2rem;
 			font-size: 1.2rem;
 		}
+	}
+
+	&__resume {
+		@include a.pulse;
 	}
 
 	&__link {
