@@ -1,0 +1,64 @@
+@use "../../styles/variables" as v;
+@use "../../styles/breakpoints" as b;
+@use "../../styles/mixins" as m;
+
+.header {
+	position: sticky;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	padding: 1.2rem 1rem;
+	display: flex;
+	justify-content: flex-end;
+	@include b.breakpoint(md) {
+		padding: 1.2rem 2rem;
+	}
+
+	&__nav {
+		display: none;
+		@include b.breakpoint(md) {
+			display: flex;
+			align-items: center;
+			gap: 2rem;
+			font-size: 1.2rem;
+		}
+	}
+
+	&__link {
+		transition: v.$transition;
+		position: relative;
+		text-transform: capitalize;
+		&:hover::after,
+		&:active::after,
+		&:focus::after {
+			width: 100%;
+		}
+	}
+
+	&__link::after {
+		content: "";
+		width: 0;
+		height: 0.2rem;
+		background-color: v.$color-primary;
+		position: absolute;
+		left: 0;
+		bottom: -0.3rem;
+		transition: 0.3s all ease-in-out;
+	}
+
+	&__hamburger {
+		font-size: 2rem;
+		background-color: inherit;
+		color: v.$color-font-light;
+		transition: v.$transition;
+		&:hover,
+		&:focus,
+		&:active {
+			color: v.$color-primary;
+		}
+		@include b.breakpoint(md) {
+			display: none;
+		}
+	}
+}
