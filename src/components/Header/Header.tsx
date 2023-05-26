@@ -1,8 +1,15 @@
+import { useState } from "react";
+import MobileNav from "../MobileNav/MobileNav";
 import { navLinks } from "../../utils/constants";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import styles from "./Header.module.scss";
 
 const Header = () => {
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+	const handleOpen = () => setIsMenuOpen(true);
+	const handleClose = () => setIsMenuOpen(false);
+
 	return (
 		<header className={styles.header}>
 			<nav className={styles.header__nav}>
@@ -18,9 +25,11 @@ const Header = () => {
 					resume
 				</a>
 			</nav>
-			<button className={styles.header__hamburger}>
+			<button className={styles.header__hamburger} onClick={handleOpen}>
 				<HiOutlineMenuAlt3 />
 			</button>
+			{/* mobile only */}
+			<MobileNav onClose={handleClose} isMenuOpen={isMenuOpen} />
 		</header>
 	);
 };
