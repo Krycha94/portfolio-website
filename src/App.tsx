@@ -1,9 +1,10 @@
 import Layout from "./components/Layout/Layout";
+import Hero from "./components/Hero/Hero";
 
 function App() {
 	return (
 		<Layout>
-			<h1>Hello</h1>
+			<Hero />
 		</Layout>
 	);
 }
