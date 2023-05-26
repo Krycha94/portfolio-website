@@ -1,5 +1,6 @@
 import image from "../../assets/krystian-pic.png";
 import SocialLinks from "../SocialLinks/SocialLinks";
+import Stack from "../Stack/Stack";
 import styles from "./Hero.module.scss";
 
 const Hero = () => {
@@ -15,7 +16,7 @@ const Hero = () => {
 					and Next.js.
 				</p>
 				<SocialLinks />
-				<div>Stack...</div>
+				<Stack />
 			</div>
 			<div className={styles.hero__image}>
 				<img src={image} alt="Krystian Kowalski profile pic" />
