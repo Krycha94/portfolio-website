@@ -1,4 +1,5 @@
 import image from "../../assets/krystian-pic.png";
+import SocialLinks from "../SocialLinks/SocialLinks";
 import styles from "./Hero.module.scss";
 
 const Hero = () => {
@@ -13,7 +14,7 @@ const Hero = () => {
 					Experienced in building responsive and accessible websites with React
 					and Next.js.
 				</p>
-				<div>Social Links...</div>
+				<SocialLinks />
 				<div>Stack...</div>
 			</div>
 			<div className={styles.hero__image}>
