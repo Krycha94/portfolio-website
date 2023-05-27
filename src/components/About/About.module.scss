@@ -14,14 +14,17 @@
 		width: 100%;
 		max-width: 500px;
 		border-radius: 12px;
+		order: 2;
 	}
 
 	&__content {
 		margin: 0 auto;
 		max-width: 500px;
+		order: 1;
 		@include b.breakpoint(lg) {
 			margin: 0;
 			max-width: 100%;
+			order: 3;
 		}
 	}
 
