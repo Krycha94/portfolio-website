@@ -8,6 +8,7 @@ type ProjectType = {
 		id: number;
 		url: string;
 		icon: JSX.Element;
+		text: string;
 	}[];
 };
 

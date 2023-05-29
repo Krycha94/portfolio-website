@@ -6,6 +6,10 @@ import logoReact from "./logo-react.png";
 import logoSass from "./logo-sass.png";
 import logoTS from "./logo-typescript.png";
 import logoNext from "./logo-nextjs.png";
+import logoFirebase from "./logo-firebase.png";
+import krychaStore from "./krycha-store.jpg";
+import lolProfile from "./lol-profile.jpg";
+import minesweeper from "./minesweeper-game.jpg";
 
 export {
 	logoHtml,
@@ -16,4 +20,8 @@ export {
 	logoSass,
 	logoTS,
 	logoNext,
+	logoFirebase,
+	krychaStore,
+	lolProfile,
+	minesweeper,
 };

@@ -10,8 +10,16 @@
 		gap: 2rem;
 	}
 
-	&__image {
+	&__imageContainer {
 		border-radius: 1rem;
+		overflow: hidden;
+	}
+
+	&__image {
+		transition: v.$transition;
+		&:hover {
+			transform: scale(1.03);
+		}
 	}
 
 	&__content {
@@ -33,14 +41,17 @@
 	&__desc {
 		margin-bottom: 1rem;
 		@include b.breakpoint(lg) {
-			font-size: 1.1rem;
+			font-size: 1rem;
 		}
 	}
 
 	&__technologies {
 		display: flex;
 		gap: 0.3rem;
-		margin-bottom: 1rem;
+		margin-bottom: 1.5rem;
+		@include b.breakpoint(lg) {
+			margin-bottom: 3rem;
+		}
 
 		img {
 			width: 35px;
