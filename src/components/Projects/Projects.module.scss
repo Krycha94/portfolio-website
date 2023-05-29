@@ -1,0 +1,22 @@
+@use "../../styles/variables" as v;
+@use "../../styles/breakpoints" as b;
+
+.projects {
+	&__title {
+		font-size: 1.4rem;
+		margin-bottom: 2rem;
+		text-transform: capitalize;
+		@include b.breakpoint(lg) {
+			font-size: 1.8rem;
+			margin-bottom: 4rem;
+		}
+	}
+
+	&__list {
+		display: grid;
+		gap: 3rem;
+		@include b.breakpoint(lg) {
+			gap: 5rem;
+		}
+	}
+}

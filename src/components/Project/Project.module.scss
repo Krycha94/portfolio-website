@@ -1,0 +1,72 @@
+@use "../../styles/variables" as v;
+@use "../../styles/breakpoints" as b;
+
+.project {
+	display: grid;
+	gap: 1rem;
+
+	@include b.breakpoint(lg) {
+		grid-template-columns: 1.5fr 1fr;
+		gap: 2rem;
+	}
+
+	&__image {
+		border-radius: 1rem;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+
+	&__name {
+		font-size: 1.3rem;
+		margin-bottom: 0.5rem;
+		@include b.breakpoint(lg) {
+			font-size: 1.5rem;
+		}
+	}
+
+	&__desc {
+		margin-bottom: 1rem;
+		@include b.breakpoint(lg) {
+			font-size: 1.1rem;
+		}
+	}
+
+	&__technologies {
+		display: flex;
+		gap: 0.3rem;
+		margin-bottom: 1rem;
+
+		img {
+			width: 35px;
+		}
+	}
+
+	&__linksContainer {
+		display: flex;
+		gap: 1.5rem;
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		gap: 0.3rem;
+		color: v.$color-font-light;
+		transition: v.$transition;
+
+		&:hover,
+		&:active,
+		&:focus {
+			color: v.$color-primary;
+		}
+
+		svg {
+			font-size: 2rem;
+		}
+	}
+}
