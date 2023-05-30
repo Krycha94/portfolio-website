@@ -13,6 +13,23 @@
 html {
 	scroll-behavior: smooth;
 	scroll-padding-top: 4.2rem;
+	/* Firefox only*/
+	scrollbar-width: thin;
+	scrollbar-color: v.$color-scrollbar v.$color-bg;
+}
+
+/* Chrome, Edge and Safari */
+html::-webkit-scrollbar {
+	width: 8px;
+}
+
+html::-webkit-scrollbar-thumb {
+	border-radius: 16px;
+	background-color: v.$color-scrollbar;
+}
+
+html::-webkit-scrollbar-track {
+	background-color: v.$color-bg;
 }
 
 body {
