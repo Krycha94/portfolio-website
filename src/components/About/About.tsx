@@ -14,11 +14,12 @@ const About = () => {
 				<p className={styles.about__text}>
 					Hello! My name is Krystian and I'm from Poland. I really enjoy
 					creating web-apps, and learning new technologies. I'm a disciplined,
-					ambitious and creative front-end developer with really various skills.
-					I specialize in React and Next.js, but I also have some knowledge of
-					how the backend works by working with Firebase and headless CMS like
-					Strapi. I am looking forward to gaining my first commercial experience
-					in a real-life job as Front-End Developer.
+					ambitious and creative front-end developer with really various skills,
+					not afraid of feedback and I am always trying my best to complete
+					every task given to me. I specialize in React and Next.js, but I also
+					have a bit knowledge of Express and MongoDB. I am looking forward to
+					gaining my first commercial experience in a real-life job as Front-End
+					Developer.
 				</p>
 			</div>
 		</section>

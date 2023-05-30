@@ -12,14 +12,14 @@
 
 	&__image {
 		width: 100%;
-		max-width: 500px;
+		max-width: 700px;
 		border-radius: 12px;
 		order: 2;
 	}
 
 	&__content {
 		margin: 0 auto;
-		max-width: 500px;
+		max-width: 700px;
 		order: 1;
 		@include b.breakpoint(lg) {
 			margin: 0;
@@ -32,14 +32,14 @@
 		font-size: 1.4rem;
 		margin-bottom: 1rem;
 		text-transform: capitalize;
-		@include b.breakpoint(lg) {
+		@include b.breakpoint(md) {
 			font-size: 1.8rem;
 		}
 	}
 
 	&__text {
 		font-family: v.$font-text;
-		@include b.breakpoint(lg) {
+		@include b.breakpoint(md) {
 			font-size: 1.2rem;
 			line-height: 1.7;
 		}
