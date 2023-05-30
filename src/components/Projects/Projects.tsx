@@ -4,7 +4,7 @@ import styles from "./Projects.module.scss";
 
 const Projects = () => {
 	return (
-		<section className={styles.projects}>
+		<section id="projects" className={styles.projects}>
 			<h3 className={styles.projects__title}>My Projects</h3>
 			<ul className={styles.projects__list}>
 				{projects.map((project) => (

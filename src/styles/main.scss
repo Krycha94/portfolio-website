@@ -10,6 +10,11 @@
 	padding: 0;
 }
 
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 4.2rem;
+}
+
 body {
 	background-color: v.$color-bg;
 	color: v.$color-font;
@@ -69,7 +74,6 @@ button {
 section {
 	@include m.container;
 	padding: 2rem 1rem;
-	border-bottom: 2px solid rgba(0, 0, 0, 0.2);
 	@include b.breakpoint(md) {
 		padding: 10rem 2rem;
 	}
