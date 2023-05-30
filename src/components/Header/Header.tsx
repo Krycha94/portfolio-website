@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MobileNav from "../MobileNav/MobileNav";
 import { navLinks } from "../../utils/constants";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
@@ -6,12 +6,23 @@ import styles from "./Header.module.scss";
 
 const Header = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const [isScrolled, setIsScrolled] = useState(false);
 
 	const handleOpen = () => setIsMenuOpen(true);
 	const handleClose = () => setIsMenuOpen(false);
 
+	useEffect(() => {
+		const handleScroll = () => {
+			window.scrollY > 0 ? setIsScrolled(true) : setIsScrolled(false);
+		};
+
+		window.addEventListener("scroll", handleScroll);
+
+		return () => window.removeEventListener("scroll", handleScroll);
+	}, []);
+
 	return (
-		<header className={styles.header}>
+		<header className={`${styles.header} ${isScrolled && styles.scrolled}`}>
 			<nav className={styles.header__nav}>
 				{navLinks.map((link) => (
 					<a href={link.address} key={link.id} className={styles.header__link}>

@@ -12,8 +12,13 @@
 	padding: 1.2rem 1rem;
 	display: flex;
 	justify-content: flex-end;
+	transition: all 0.7s ease-in-out;
 	@include b.breakpoint(md) {
 		padding: 1.2rem 2rem;
+	}
+
+	&.scrolled {
+		background: rgba(0, 0, 0, 0.9);
 	}
 
 	&__nav {
@@ -27,6 +32,8 @@
 	}
 
 	&__resume {
+		color: v.$color-primary;
+		font-weight: bold;
 		@include a.pulse;
 	}
 
