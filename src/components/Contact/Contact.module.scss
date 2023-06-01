@@ -1,5 +1,6 @@
 @use "../../styles/variables" as v;
 @use "../../styles/breakpoints" as b;
+@use "../../styles/animations" as a;
 
 .contact {
 	text-align: center;
@@ -26,6 +27,7 @@
 		width: 180px;
 		margin: 0 auto;
 		transition: v.$transition;
+		@include a.pulse;
 		&:hover,
 		&:focus {
 			color: v.$color-primary;

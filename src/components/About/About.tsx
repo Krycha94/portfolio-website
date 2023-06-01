@@ -1,9 +1,17 @@
+import { motion } from "framer-motion";
 import img from "../../assets/about-pic.jpg";
 import styles from "./About.module.scss";
 
 const About = () => {
 	return (
-		<section id="about" className={styles.about}>
+		<motion.section
+			id="about"
+			className={styles.about}
+			initial={{ x: -100, opacity: 0 }}
+			whileInView={{ x: 0, opacity: 1 }}
+			viewport={{ once: true }}
+			transition={{ duration: 0.7, delay: 0.1 }}
+		>
 			<img
 				src={img}
 				alt="laptop with notebook"
@@ -22,7 +30,7 @@ const About = () => {
 					Developer.
 				</p>
 			</div>
-		</section>
+		</motion.section>
 	);
 };
 export default About;
