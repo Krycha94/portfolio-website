@@ -12,8 +12,11 @@ import {
 	lolProfile,
 	minesweeper,
 } from "../assets";
+import navLinksType from "../types/NavLinksType";
+import SocialLinksType from "../types/SocialLinksType";
+import ProjectType from "../types/ProjectType";
 
-export const navLinks = [
+export const navLinks: navLinksType[] = [
 	{
 		id: 1,
 		address: "#home",
@@ -36,12 +39,22 @@ export const navLinks = [
 	},
 ];
 
-export const socialLinks = [
-	{ id: 1, address: "https://www.github.com", icon: <AiOutlineGithub /> },
-	{ id: 2, address: "https://www.linkedin.com", icon: <AiFillLinkedin /> },
+export const socialLinks: SocialLinksType[] = [
+	{
+		id: 1,
+		address: "https://www.github.com",
+		icon: <AiOutlineGithub />,
+		name: "github",
+	},
+	{
+		id: 2,
+		address: "https://www.linkedin.com",
+		icon: <AiFillLinkedin />,
+		name: "linkedin",
+	},
 ];
 
-export const projects = [
+export const projects: ProjectType[] = [
 	{
 		id: 1,
 		img: krychaStore,

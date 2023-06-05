@@ -6,7 +6,12 @@ const SocialLinks = () => {
 		<ul className={styles.socials}>
 			{socialLinks.map((link) => (
 				<li key={link.id}>
-					<a href={link.address} target="_blank" className={styles.socials__link}>
+					<a
+						href={link.address}
+						target="_blank"
+						className={styles.socials__link}
+						aria-label={link.name}
+					>
 						{link.icon}
 					</a>
 				</li>
